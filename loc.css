@@ -216,3 +216,8 @@ body {
     width: 220px;
     cursor: pointer;
 }
+#surpriseGif {
+    display: none; /* Keeps the image hidden initially */
+    width: 400px;   /* Adjust the width as per your requirement */
+    height: auto;   /* Maintains the aspect ratio */
+}
