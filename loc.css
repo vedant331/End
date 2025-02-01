@@ -188,6 +188,7 @@ body {
     position: absolute;
     left: -250px;
     top:0px;
+    width:200px;
 }
 
 .right-image {
