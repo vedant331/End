@@ -225,7 +225,7 @@ body {
 .border-box {
     margin-top: 20px; /* Space between the image and the box */
     padding: 15px; /* Padding inside the box */
-    border:2px solid crimson; /* Pink border */
+    border:none; /* Pink border */
     border-radius: 10px; /* Rounded corners */
     background-color: rgba(240, 9, 44, 0.705); /* Light pink background */
     font-size: 35px; /* Text size */
