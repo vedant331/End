@@ -226,9 +226,9 @@ body {
 }
 /* Style for the border box below 'her.jpg' */
 .border-box {
-    position: relative; /* Ensures it follows normal document flow */
-    z-index: 10; /* Moves it above other elements */
-    margin-top: 20px; /* Space between the image and the box */
+    position: relative; /* Keeps it in normal flow below the image */
+    z-index: 10; /* Higher than background but lower than popups */
+    margin-top: 20px; /* Ensures spacing from the image */
     padding: 20px;
     border: none;
     border-radius: 10px;
@@ -239,7 +239,8 @@ body {
     color: #ffffff;
     box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
     width: 300px;
-    display: none; /* Initially hidden */
+    display: none; /* Keeps hidden initially */
 }
+
 
 
