@@ -226,18 +226,20 @@ body {
 }
 /* Style for the border box below 'her.jpg' */
 .border-box {
+    position: relative; /* Ensures it follows normal document flow */
+    z-index: 10; /* Moves it above other elements */
     margin-top: 20px; /* Space between the image and the box */
-    padding: 20px; /* Padding inside the box */
-    border:none; /* Pink border */
-    border-radius: 10px; /* Rounded corners */
-    background-color: rgba(255, 20, 147, 0.8); /* Light pink background */
-    font-size: 35px; /* Text size */
-    font-weight:bold;
-    text-align: center; /* Center-align the text */
-    text-color: #ffffff;
-    box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8); /* Pink Glow */
-    width: 300px; /* Set width for the box */
-    margin: 50px; /* Center horizontally */
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 20, 147, 0.8);
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
+    width: 300px;
     display: none; /* Initially hidden */
 }
+
 
