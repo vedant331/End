@@ -227,9 +227,10 @@ body {
 }
 /* Style for the border box below 'her.jpg' */
 .border-box {
-    position: relative; /* Keeps it in normal flow below the image */
-    z-index: 10; /* Higher than background but lower than popups */
-    margin-top: 20px; /* Ensures spacing from the image */
+    display: none; /* Hides it by default */
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
     padding: 20px;
     border: none;
     border-radius: 10px;
