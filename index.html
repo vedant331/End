@@ -56,7 +56,7 @@
 
     <script>
         function showBeluga() {
-            document.body.style.background = "#3d3d3d";
+            document.body.style.background = "#000";
             document.getElementById("finalContainer").style.display = "flex"; // Show final images
             document.getElementById("giftGif").style.display = "none"; // Hide the gift animation
             document.getElementById("openBoxText").style.display = "none"; // Hide the "Open the box" text
@@ -67,7 +67,7 @@
 
         function showGif() {
             document.getElementById("surpriseGif").style.display = "block"; // Show surprise gif
-            document.getElementById("messageBox").style.display = "block"; // Hide message box
+            document.getElementById("messageBox").style.display = "none"; // Hide message box
             document.getElementById("finalContainer").style.display = "none"; // Hide the Beluga image and the left/right images
             document.getElementById("openBoxText").style.display = "none"; // Hide "Open the box" text
             document.getElementById("bgMusic").pause(); // Stop the previous music
