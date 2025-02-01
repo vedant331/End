@@ -228,7 +228,7 @@ body {
 }
 /* Style for the border box below 'her.jpg' */
 #borderBox{
-    display: none !important; /* Hides it by default */
+    display: none; /* Hides it by default */
     position: relative;
     z-index: 10;
     margin-top: 20px;
