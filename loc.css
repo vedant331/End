@@ -227,8 +227,8 @@ body {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); /* Subtle glow */
 }
 /* Style for the border box below 'her.jpg' */
-#borderBox{
-    display: none; /* Hides it by default */
+#borderBox {
+    display: none; /* Keep it hidden initially */
     position: relative;
     z-index: 10;
     margin-top: 20px;
@@ -242,7 +242,6 @@ body {
     color: #ffffff;
     box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
     width: 300px;
+    /* Ensure it stays above the surprise gif */
+    position: relative;
 }
-
-
-
