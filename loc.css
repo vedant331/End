@@ -218,9 +218,9 @@ body {
 }
 #surpriseGif {
     display: none; /* Keeps the image hidden initially */
-    width: 400px;   /* Adjust the width as per your requirement */
+    width: 300px;   /* Adjust the width as per your requirement */
     height: auto;   /* Maintains the aspect ratio */
-    margin-top: 20px;
+    margin-top: -50px;
     border-radius: 10px; /* Add smooth edges */
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); /* Subtle glow */
 }
@@ -234,7 +234,7 @@ body {
     font-size: 35px; /* Text size */
     font-weight:bold;
     text-align: center; /* Center-align the text */
-    color: rgb(25, 246, 239);
+    color: #ffffff;
     box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8); /* Pink Glow */
     width: 300px; /* Set width for the box */
     margin: 20px auto; /* Center horizontally */
