@@ -226,8 +226,8 @@ body {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); /* Subtle glow */
 }
 /* Style for the border box below 'her.jpg' */
-.border-box {
-    display: none; /* Hides it by default */
+#borderBox{
+    display: none !important; /* Hides it by default */
     position: relative;
     z-index: 10;
     margin-top: 20px;
