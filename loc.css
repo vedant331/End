@@ -199,23 +199,6 @@ body {
     height: auto;
     display: block;
 }
-
-.left-image {
-    left: -100px;
-}
-
-.right-image {
-    right: -100px;
-}
-
-.main-image {
-    background: url("beluga.jpg") no-repeat center center;
-    background-size: cover;
-    width: 500px;
-    height: 350px;
-    display: block;
-}
-
 .left-image {
     position: absolute;
     left: -100px;
