@@ -191,27 +191,17 @@ body {
     animation: animate 3s linear forwards;
     overflow: hidden; /* Prevents images from overflowing */
 }
-.left-image, .right-image, .main-image {
+left-image {
     position: absolute;
-    top: 0;
-    width: 200px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-.left-image {
-    position: absolute;
-    left: -100px;
+    left: -300px;
     top:0px;
     width:200px;
 }
 
 .right-image {
     position: absolute;
-    top: 0;
-    right: -100%; /* Adjust for better positioning */
-    width: 200%; /* Adjust to be responsive */
-    max-width: 100px;  /* Ensure it doesn't get too large */
+    top: 1px;
+    right: -300px;
 }
 
 .main-image {
@@ -221,7 +211,6 @@ body {
     height: 350px;
     display: block;
 }
-
 .message-box {
     position: absolute;
     bottom: 400px;
