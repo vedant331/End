@@ -217,7 +217,7 @@ body {
 
 .message-box {
     position: absolute;
-    bottom: 300px;
+    bottom: 50px;
     padding: 15px;
     background-color: rgb(255, 217, 0);
     border: 2px solid orange;
