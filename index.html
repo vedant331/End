@@ -59,7 +59,7 @@
     </audio>
 
     <script>
-       function showBeluga() {
+        function showBeluga() {
     document.body.style.background = "#000";
     document.getElementById("finalContainer").style.display = "flex"; // Show final images
     document.getElementById("giftGif").style.display = "none"; // Hide the gift animation
@@ -67,23 +67,21 @@
     document.getElementById("messageBox").style.display = "block"; // Show message box
     document.getElementById("bgMusic").play();
     document.getElementById("giftBox").style.display = "none"; // Completely remove the gift box
-    document.getElementById("borderBox").style.display = "none"; // Hide the border box
+    document.getElementById("borderBox").style.display = "none";
 }
 
-function showGif() {
-    document.getElementById("surpriseContainer").style.display = "flex"; // Show surprise images
-    document.getElementById("messageBox").style.display = "none"; // Hide message box
-    document.getElementById("finalContainer").style.display = "none"; // Hide the final container
-    document.getElementById("bgMusic").pause(); // Stop the previous music
-    document.getElementById("herMusic").play(); // Play new music for the her image page
-    document.getElementById("borderBox").style.display = "block"; // Show the border box
-}
-
-// Ensure images inside finalContainer are visible on load
+// Fix: Ensure images inside finalContainer are visible
 window.onload = function () {
     document.getElementById("finalContainer").style.display = "none";
-    document.getElementById("surpriseContainer").style.display = "none";
 };
+
+function showGif() {
+    document.getElementById("surpriseContainer").style.display = "flex"; // Show surprise gif
+    document.getElementById("messageBox").style.display = "none"; // Hide message box
+    document.getElementById("finalContainer").style.display = "none"; // Hide the Beluga image and the left/right images
+    document.getElementById("bgMusic").pause(); // Stop the previous music
+    document.getElementById("herMusic").play(); // Play new music for the her image page
+    document.getElementById("borderBox").style.display = "block";
 
     </script>
 </body>
