@@ -179,22 +179,32 @@ body {
     animation: animate 3s linear forwards;
 }
 
-.final-container img {
-    width: 300px;
-    height: auto;
+.final-container {
+    position: absolute;
+    width: 90%;  /* Adjust to make the container fit within the screen */
+    max-width: 300px; /* Ensure max-width for larger screens */
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: animate 3s linear forwards;
+    overflow: hidden; /* Prevents images from overflowing */
 }
 
 .left-image {
     position: absolute;
-    left: -300px;
+    left: -100px;
     top:0px;
     width:200px;
 }
 
 .right-image {
     position: absolute;
-    top: 1px;
-    right: -300px;
+    top: 0;
+    right: -100%; /* Adjust for better positioning */
+    width: 100%; /* Adjust to be responsive */
+    max-width: 200px;  /* Ensure it doesn't get too large */
 }
 
 .main-image {
