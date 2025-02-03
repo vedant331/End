@@ -187,6 +187,8 @@ body {
 .left-image {
     position: absolute;
     left: -300px;
+    top:0px;
+    width:200px;
 }
 
 .right-image {
@@ -198,8 +200,8 @@ body {
 .main-image {
     background: url("beluga.jpg") no-repeat center center;
     background-size: cover;
-    width: 700px;
-    height: 500px;
+    width: 500px;
+    height: 350px;
     display: block;
 }
 
@@ -216,30 +218,19 @@ body {
     width: 220px;
     cursor: pointer;
 }
-.surprise-container {
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.surprise-img {
-    width: 200px; /* Adjust the width as needed */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
-}
-.surprise-img, .extra-img {
-    width: 200px; /* Adjust width as needed */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+#surpriseGif {
+    display: none; /* Keeps the image hidden initially */
+    width: 300px;   /* Adjust the width as per your requirement */
+    height: auto;   /* Maintains the aspect ratio */
+    margin-top: -50px;
+    border-radius: 10px; /* Add smooth edges */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); /* Subtle glow */
 }
 /* Style for the border box below 'her.jpg' */
-#borderBox {
-    display: none; /* Keep it hidden initially */
+#borderBox{
+    display: none; /* Hides it by default */
     position: relative;
-    z-index: 100; /* Higher z-index to ensure it is on top */
+    z-index: 10;
     margin-top: 20px;
     padding: 20px;
     border: none;
@@ -251,8 +242,4 @@ body {
     color: #ffffff;
     box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
     width: 300px;
-    /* Ensure the position doesn't interfere with other elements */
-    position: relative;
-    transition: 0.5s ease; /* Smooth transition for appearing */
-}
-
+} 
