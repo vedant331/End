@@ -218,13 +218,12 @@ body {
     width: 220px;
     cursor: pointer;
 }
-#surpriseGif {
-    display: none; /* Keeps the image hidden initially */
-    width: 300px;   /* Adjust the width as per your requirement */
-    height: auto;   /* Maintains the aspect ratio */
-    margin-top: -50px;
-    border-radius: 10px; /* Add smooth edges */
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); /* Subtle glow */
+.surprise-container {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .surprise-img, .extra-img {
     width: 300px; /* Adjust width as needed */
