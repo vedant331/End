@@ -233,7 +233,7 @@ body {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
 }
 .surprise-img, .extra-img {
-    width: 150px; /* Adjust width as needed */
+    width: 200px; /* Adjust width as needed */
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
