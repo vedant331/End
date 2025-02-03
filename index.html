@@ -12,7 +12,7 @@
     <div class="container">
         <!-- Final Images (Initially Hidden) -->
         <div class="final-container" id="finalContainer" style="display: none;">
-            <img src="simp.webp" alt="Left Image" class="left-image">
+            <img src="bajibaji.gif" alt="Left Image" class="left-image">
             <div class="main-image"></div> <!-- Holds beluga.jpg -->
             <img src="lomp.webp" alt="Right Image" class="right-image">
         </div>
@@ -36,15 +36,9 @@
             Click for a Surprise!
         </div>
 
-        <!-- Surprise Images (Initially Hidden) -->
-<div id="surpriseContainer" style="display: none;">
-    <img src="her.jpg" alt="Surprise Image" class="surprise-img">
-    <img src="thankyou.webp" alt="Thank You Image" class="extra-img">
-</div>
-
-        <div class="border-box" id="borderBox">
-            For You, Gorgeousss ❤️
-        </div>
+        <!-- Surprise GIF (Initially Hidden) -->
+        <img src="her.jpg" alt="Surprise GIF" id="surpriseGif" style="display: none;">
+        <img src="thankyou.webp" alt="Right Side Image" class="extra-img">
     </div>
 
     <audio id="bgMusic" loop>
@@ -60,29 +54,24 @@
 
     <script>
         function showBeluga() {
-    document.body.style.background = "#000";
-    document.getElementById("finalContainer").style.display = "flex"; // Show final images
-    document.getElementById("giftGif").style.display = "none"; // Hide the gift animation
-    document.getElementById("openBoxText").style.display = "none"; // Hide the "Open the box" text
-    document.getElementById("messageBox").style.display = "block"; // Show message box
-    document.getElementById("bgMusic").play();
-    document.getElementById("giftBox").style.display = "none"; // Completely remove the gift box
-    document.getElementById("borderBox").style.display = "none";
-}
+            document.body.style.background = "#3d3d3d";
+            document.getElementById("finalContainer").style.display = "flex"; // Show final images
+            document.getElementById("giftGif").style.display = "none"; // Hide the gift animation
+            document.getElementById("openBoxText").style.display = "none"; // Hide the "Open the box" text
+            document.getElementById("messageBox").style.display = "block"; // Show message box
+            document.getElementById("bgMusic").play();
+            document.getElementById("giftBox").style.display = 'none'; // Completely remove the gift box after clicking
+    
+        }
 
-// Fix: Ensure images inside finalContainer are visible
-window.onload = function () {
-    document.getElementById("finalContainer").style.display = "none";
-};
-
-function showGif() {
-    document.getElementById("surpriseContainer").style.display = "flex"; // Show surprise gif
-    document.getElementById("messageBox").style.display = "none"; // Hide message box
-    document.getElementById("finalContainer").style.display = "none"; // Hide the Beluga image and the left/right images
-    document.getElementById("bgMusic").pause(); // Stop the previous music
-    document.getElementById("herMusic").play(); // Play new music for the her image page
-    document.getElementById("borderBox").style.display = "block";
-
+        function showGif() {
+            document.getElementById("surpriseGif").style.display = "block"; // Show surprise gif
+            document.getElementById("messageBox").style.display = "none"; // Hide message box
+            document.getElementById("finalContainer").style.display = "none"; // Hide the Beluga image and the left/right images
+            document.getElementById("openBoxText").style.display = "none"; // Hide "Open the box" text
+            document.getElementById("bgMusic").pause(); // Stop the previous music
+            document.getElementById("herMusic").play(); // Play new music for the her image page
+        }
     </script>
 </body>
 
