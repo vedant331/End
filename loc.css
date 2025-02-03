@@ -196,14 +196,14 @@ body {
     position: absolute;
     left: -100px;
     top:0px;
-    width:100px;
+    width:200px;
 }
 
 .right-image {
     position: absolute;
     top: 0;
     right: -100%; /* Adjust for better positioning */
-    width: 100%; /* Adjust to be responsive */
+    width: 200%; /* Adjust to be responsive */
     max-width: 100px;  /* Ensure it doesn't get too large */
 }
 
