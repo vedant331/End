@@ -168,41 +168,38 @@ body {
     border-top-right-radius: 90%;
 }
 
-/* All of the existing styles remain the same. Just fix the final-container and final-image class positioning */
 .final-container {
     position: absolute;
-    width: 90%;  /* Adjust to make the container fit within the screen */
-    max-width: 300px; /* Ensure max-width for larger screens */
+    width: 300px;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     animation: animate 3s linear forwards;
-    overflow: hidden; /* Prevents images from overflowing */
 }
 
-/* Ensure left and right images have correct placement */
-.left-image, .right-image {
-    position: absolute;
-    top: 0;
-    width: 200px;
+.final-container img {
+    width: 300px;
     height: auto;
 }
 
 .left-image {
+    position: absolute;
     left: -300px;
 }
 
 .right-image {
+    position: absolute;
+    top: 1px;
     right: -300px;
 }
 
 .main-image {
     background: url("beluga.jpg") no-repeat center center;
     background-size: cover;
-    width: 500px;
-    height: 350px;
+    width: 700px;
+    height: 500px;
     display: block;
 }
 
