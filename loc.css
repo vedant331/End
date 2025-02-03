@@ -196,7 +196,7 @@ body {
     position: absolute;
     left: -100px;
     top:0px;
-    width:200px;
+    width:100px;
 }
 
 .right-image {
@@ -204,7 +204,7 @@ body {
     top: 0;
     right: -100%; /* Adjust for better positioning */
     width: 100%; /* Adjust to be responsive */
-    max-width: 200px;  /* Ensure it doesn't get too large */
+    max-width: 100px;  /* Ensure it doesn't get too large */
 }
 
 .main-image {
