@@ -178,19 +178,6 @@ body {
     gap: 20px;
     animation: animate 3s linear forwards;
 }
-
-.final-container {
-    position: absolute;
-    width: 90%;  /* Adjust to make the container fit within the screen */
-    max-width: 300px; /* Ensure max-width for larger screens */
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    animation: animate 3s linear forwards;
-    overflow: hidden; /* Prevents images from overflowing */
-}
 left-image {
     position: absolute;
     left: -300px;
