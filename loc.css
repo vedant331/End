@@ -168,26 +168,33 @@ body {
     border-top-right-radius: 90%;
 }
 
+/* All of the existing styles remain the same. Just fix the final-container and final-image class positioning */
 .final-container {
     position: absolute;
-    width: 300px;
+    width: 90%;  /* Adjust to make the container fit within the screen */
+    max-width: 300px; /* Ensure max-width for larger screens */
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     animation: animate 3s linear forwards;
+    overflow: hidden; /* Prevents images from overflowing */
 }
-left-image {
+
+/* Ensure left and right images have correct placement */
+.left-image, .right-image {
     position: absolute;
+    top: 0;
+    width: 200px;
+    height: auto;
+}
+
+.left-image {
     left: -300px;
-    top:0px;
-    width:200px;
 }
 
 .right-image {
-    position: absolute;
-    top: 1px;
     right: -300px;
 }
 
@@ -198,6 +205,7 @@ left-image {
     height: 350px;
     display: block;
 }
+
 .message-box {
     position: absolute;
     bottom: 400px;
