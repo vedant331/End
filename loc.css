@@ -219,25 +219,24 @@ body {
     cursor: pointer;
 }
 #surpriseGif {
-    display: none; /* Keeps the image hidden initially */
-    width: 300px;   /* Adjust the width as per your requirement */
-    height: auto;   /* Maintains the aspect ratio */
+    display: none;
+    width: 300px;  /* Keep her.jpg normal size */
+    height: auto;
     margin-top: -50px;
-    border-radius: 10px; /* Add smooth edges */
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); /* Subtle glow */
-}
-#surpriseGif, #newSurpriseGif {
-    display: none; /* Keep them hidden initially */
-    width: 300px;   /* Adjust width */
-    height: auto;   /* Maintain aspect ratio */
-    margin-top: -50px;
-    border-radius: 10px; /* Smooth edges */
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); /* Subtle glow */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
 }
 
+/* Reduce the size of thankyou.webp */
 #newSurpriseGif {
+    display: none;
+    width: 150px;  /* Decreased width */
+    height: auto;
     position: absolute;
-    left: 350px; /* Adjust as needed */
+    left: 320px; /* Adjust positioning */
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
 }
 
 /* Style for the border box below 'her.jpg' */
