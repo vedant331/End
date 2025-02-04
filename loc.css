@@ -226,6 +226,20 @@ body {
     border-radius: 10px; /* Add smooth edges */
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); /* Subtle glow */
 }
+#surpriseGif, #newSurpriseGif {
+    display: none; /* Keep them hidden initially */
+    width: 300px;   /* Adjust width */
+    height: auto;   /* Maintain aspect ratio */
+    margin-top: -50px;
+    border-radius: 10px; /* Smooth edges */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); /* Subtle glow */
+}
+
+#newSurpriseGif {
+    position: absolute;
+    left: 350px; /* Adjust as needed */
+}
+
 /* Style for the border box below 'her.jpg' */
 #borderBox{
     display: none; /* Hides it by default */
