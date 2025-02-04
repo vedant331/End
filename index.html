@@ -38,6 +38,7 @@
 
         <!-- Surprise GIF (Initially Hidden) -->
         <img src="her.jpg" alt="Surprise GIF" id="surpriseGif" style="display: none;">
+        <img src="thankyou.webp" alt="Thank You GIF" id="newSurpriseGif" style="display: none;">
         <div class="border-box" id="borderBox">
             For You, Gorgeousss ❤️
         </div>
@@ -68,6 +69,7 @@
 
         function showGif() {
             document.getElementById("surpriseGif").style.display = "block"; // Show surprise gif
+            document.getElementById("newSurpriseGif").style.display = "block";
             document.getElementById("messageBox").style.display = "none"; // Hide message box
             document.getElementById("finalContainer").style.display = "none"; // Hide the Beluga image and the left/right images
             document.getElementById("openBoxText").style.display = "none"; // Hide "Open the box" text
