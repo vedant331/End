@@ -40,9 +40,14 @@
         <div class="border-box" id="borderBox">
             For you , GORGEOUSSSS 🤍
         </div>
-        
-        <!-- Envelope Section -->
-        <div class="envelope-wrapper" id="letterBox" style="display: none;">
+
+        <!-- Button to Show Letter (Added here) -->
+        <div class="click-letter" id="clickLetterBtn" style="display: none;" onclick="showLetter()">
+            Click on Letter
+        </div>
+
+        <!-- Envelope Section (Hidden Initially) -->
+        <div class="envelope-wrapper" id="envelopeWrapper" style="display: none;">
             <div class="envelope">
                 <div class="letter">
                     <div class="text">
@@ -63,6 +68,7 @@
         Your browser does not support the audio element.
     </audio>
 
+    <!-- New background music for the "her image" page -->
     <audio id="herMusic" loop>
         <source src="i-wanna-be-yours-artic-monke-63563.mp3" type="audio/mp4">
         Your browser does not support the audio element.
@@ -90,10 +96,13 @@
             document.getElementById("herMusic").play(); // Play new music for the her image page
             document.getElementById("borderBox").style.display = "block";
 
-            // Show the letter box after the final step
-            setTimeout(function() {
-                document.getElementById("letterBox").style.display = "block"; // Show the letter box
-            }, 3000); // Delay for letter box to appear after surprise GIF
+            // Show the "Click on Letter" button after surprise gif
+            document.getElementById("clickLetterBtn").style.display = "block";
+        }
+
+        function showLetter() {
+            document.getElementById("clickLetterBtn").style.display = "none"; // Hide "Click on Letter" button
+            document.getElementById("envelopeWrapper").style.display = "block"; // Show envelope
         }
     </script>
 </body>
