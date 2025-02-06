@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gift Box</title>
     <link rel="stylesheet" href="loc.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Final Images (Initially Hidden) -->
@@ -29,37 +31,27 @@
             <div class="shadow"></div>
         </div>
 
+
         <div class="message-box" id="messageBox" style="display: none;" onclick="showGif()">
             Click for a Surprise!
         </div>
+
 
         <img src="her.jpg" alt="Surprise GIF" id="surpriseGif" style="display: none;">
         <img src="thankyou.webp" alt="Thank You GIF" id="newSurpriseGif" style="display: none;">
         <div class="border-box" id="borderBox">
             For you , GORGEOUSSSS 🤍
         </div>
-
-        <!-- Button to show the letter -->
-        <button id="letterButton" class="letter-button" onclick="showLetter()">Click on Letter</button>
-
-        <!-- Letter Box (Initially Hidden) -->
-        <div class="letter-wrapper" id="letterWrapper" style="display: none;">
-            <div class="envelope">
-                <div class="letter">
-                    <div class="text">
-                        <strong>Dear Person.</strong>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Numquam labore omnis minus maiores laboriosam, facere in beatae esse.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <audio id="bgMusic" loop>
         <source src="fm-freemusic-cheerful-whistling(chosic.com).mp3" type="audio/mp4">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- New background music for the "her image" page -->
+    <audio id="herMusic" loop>
+        <source src="i-wanna-be-yours-artic-monke-63563.mp3" type="audio/mp4">
         Your browser does not support the audio element.
     </audio>
 
@@ -77,15 +69,15 @@
 
         function showGif() {
             document.getElementById("surpriseGif").style.display = "block"; // Show surprise gif
-            document.getElementById("newSurpriseGif").style.display = "block"; // Show new surprise gif
-            setTimeout(function() {
-                document.getElementById("newSurpriseGif").style.display = "none"; // Hide the new surprise gif after some time
-            }, 5000); // Adjust time as needed
-        }
-
-        function showLetter() {
-            document.getElementById("letterWrapper").style.display = "block"; // Show the letter content
+            document.getElementById("newSurpriseGif").style.display = "block";
+            document.getElementById("messageBox").style.display = "none"; // Hide message box
+            document.getElementById("finalContainer").style.display = "none"; // Hide the Beluga image and the left/right images
+            document.getElementById("openBoxText").style.display = "none"; // Hide "Open the box" text
+            document.getElementById("bgMusic").pause(); // Stop the previous music
+            document.getElementById("herMusic").play(); // Play new music for the her image page
+            document.getElementById("borderBox").style.display = "block";
         }
     </script>
 </body>
+
 </html>
