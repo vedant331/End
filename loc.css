@@ -1,206 +1,181 @@
-/* Base Styles */
+/* Styling the body */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    overflow-x: hidden;
+    text-align: center;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+/* Styling the 'Click on Letter' button */
+.letter-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 20px;
+    transition: background-color 0.3s ease;
 }
 
+.letter-button:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+/* Styling the letter box */
+.letter-wrapper {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.envelope {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.letter {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.text strong {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Styling the final container and images */
 .final-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     margin-top: 20px;
 }
 
-.left-image, .right-image {
-    width: 150px;
-    height: 150px;
-    margin: 0 20px;
+.left-image,
+.right-image {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .main-image {
-    width: 250px;
+    width: 45%;
     height: 250px;
     background-image: url('beluga.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.gift-gif {
-    width: 200px;
-    height: 200px;
-    margin-top: 20px;
-}
-
-.open-box-message {
-    font-size: 20px;
-    color: #333;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
+/* Styling the gift box */
 .gift {
     position: relative;
     width: 200px;
     height: 200px;
-    background-color: #f4d03f;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
-.click {
+.gift input[type="checkbox"] {
+    display: none;
+}
+
+.gift .click {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.gift .tape {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: #999;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50%;
-    background-color: #fff;
-    cursor: pointer;
 }
 
-.tape, .shadow {
+.gift .shadow {
     position: absolute;
-    background-color: #333;
-    border-radius: 5px;
-}
-
-.tape {
-    top: 10%;
+    bottom: -10px;
     left: 50%;
-    width: 50%;
-    height: 5px;
-    transform: translateX(-50%);
-}
-
-.shadow {
-    bottom: 0;
-    left: 50%;
-    width: 90%;
+    width: 80%;
     height: 10px;
-    opacity: 0.2;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
     transform: translateX(-50%);
 }
 
+/* Styling the message box */
 .message-box {
     display: none;
-    background-color: #fcfcfc;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+    background-color: #fffae6;
+    padding: 15px;
+    border-radius: 10px;
     font-size: 18px;
-    color: #333;
+    color: #555;
+    margin-top: 20px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-#surpriseGif, #newSurpriseGif {
-    width: 300px;
-    height: 300px;
-    margin-top: 20px;
+/* Styling the surprise GIF */
+#surpriseGif,
+#newSurpriseGif {
     display: none;
+    margin-top: 20px;
+    width: 300px;
+    border-radius: 10px;
 }
 
+/* Styling the border box */
 #borderBox {
     display: none;
-    font-size: 22px;
-    font-weight: bold;
     margin-top: 20px;
-    color: #e30f5d;
-}
-
-.click-letter {
-    display: none;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
-    color: #fff;
-    background-color: #e30f5d;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.click-letter:hover {
-    background-color: #c6094f;
-}
-
-/* Envelope styles */
-.envelope-wrapper {
-    display: none;
-    margin-top: 50px;
-    text-align: center;
-    position: relative;
-    width: 350px;
-    height: 300px;
-}
-
-.envelope {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #f5edd1;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.letter {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    font-size: 16px;
     color: #333;
+    background-color: #e8e8e8;
+    padding: 20px;
     border-radius: 10px;
-}
-
-.letter .text {
-    font-size: 16px;
-    text-align: left;
-}
-
-/* Heart animation */
-.heart {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    bottom: -80px;
-    left: 50%;
-    margin-left: -40px;
-    background-color: #e30f5d;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    animation: heart 2s infinite;
-}
-
-@keyframes heart {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Additional Audio Settings */
-audio {
-    display: none;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
