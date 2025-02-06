@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gift Box</title>
     <link rel="stylesheet" href="loc.css">
 </head>
-
 <body>
     <div class="container">
         <!-- Final Images (Initially Hidden) -->
@@ -41,13 +39,11 @@
             For you , GORGEOUSSSS 🤍
         </div>
 
-        <!-- Button to Show Letter (Added here) -->
-        <div class="click-letter" id="clickLetterBtn" style="display: none;" onclick="showLetter()">
-            Click on Letter
-        </div>
+        <!-- Button to show the letter -->
+        <button id="letterButton" class="letter-button" onclick="showLetter()">Click on Letter</button>
 
-        <!-- Envelope Section (Hidden Initially) -->
-        <div class="envelope-wrapper" id="envelopeWrapper" style="display: none;">
+        <!-- Letter Box (Initially Hidden) -->
+        <div class="letter-wrapper" id="letterWrapper" style="display: none;">
             <div class="envelope">
                 <div class="letter">
                     <div class="text">
@@ -59,18 +55,11 @@
                     </div>
                 </div>
             </div>
-            <div class="heart"></div>
         </div>
     </div>
 
     <audio id="bgMusic" loop>
         <source src="fm-freemusic-cheerful-whistling(chosic.com).mp3" type="audio/mp4">
-        Your browser does not support the audio element.
-    </audio>
-
-    <!-- New background music for the "her image" page -->
-    <audio id="herMusic" loop>
-        <source src="i-wanna-be-yours-artic-monke-63563.mp3" type="audio/mp4">
         Your browser does not support the audio element.
     </audio>
 
@@ -88,23 +77,15 @@
 
         function showGif() {
             document.getElementById("surpriseGif").style.display = "block"; // Show surprise gif
-            document.getElementById("newSurpriseGif").style.display = "block";
-            document.getElementById("messageBox").style.display = "none"; // Hide message box
-            document.getElementById("finalContainer").style.display = "none"; // Hide the Beluga image and the left/right images
-            document.getElementById("openBoxText").style.display = "none"; // Hide "Open the box" text
-            document.getElementById("bgMusic").pause(); // Stop the previous music
-            document.getElementById("herMusic").play(); // Play new music for the her image page
-            document.getElementById("borderBox").style.display = "block";
-
-            // Show the "Click on Letter" button after surprise gif
-            document.getElementById("clickLetterBtn").style.display = "block";
+            document.getElementById("newSurpriseGif").style.display = "block"; // Show new surprise gif
+            setTimeout(function() {
+                document.getElementById("newSurpriseGif").style.display = "none"; // Hide the new surprise gif after some time
+            }, 5000); // Adjust time as needed
         }
 
         function showLetter() {
-            document.getElementById("clickLetterBtn").style.display = "none"; // Hide "Click on Letter" button
-            document.getElementById("envelopeWrapper").style.display = "block"; // Show envelope
+            document.getElementById("letterWrapper").style.display = "block"; // Show the letter content
         }
     </script>
 </body>
-
 </html>
