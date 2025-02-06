@@ -22,7 +22,6 @@ body {
     flex-direction: column;
 }
 
-/* Styling for the GIF */
 .gift-gif {
     position: absolute;
     top: -300px;
@@ -31,7 +30,6 @@ body {
     z-index: 10;
 }
 
-/* Styling for the "Open the box" message */
 .open-box-message {
     margin-top: -75px;
     padding: 15px;
@@ -47,7 +45,6 @@ body {
     top: 45px;
 }
 
-/* Gift Box Styling */
 .gift {
     position: absolute;
     width: 150px;
@@ -187,8 +184,8 @@ body {
 .left-image {
     position: absolute;
     left: -300px;
-    top:0px;
-    width:200px;
+    top: 0px;
+    width: 200px;
 }
 
 .right-image {
@@ -218,30 +215,29 @@ body {
     width: 220px;
     cursor: pointer;
 }
+
 #surpriseGif {
     display: none;
-    width: 300px;  /* Keep her.jpg normal size */
+    width: 300px;
     height: auto;
     margin-top: -50px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
 }
 
-/* Reduce the size of thankyou.webp */
 #newSurpriseGif {
     display: none;
-    width: 150px;  /* Decreased width */
+    width: 150px;
     height: auto;
     position: absolute;
-    left: 320px; /* Adjust positioning */
+    left: 320px;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 10px;
 }
 
-/* Style for the border box below 'her.jpg' */
-#borderBox{
-    display: none; /* Hides it by default */
+#borderBox {
+    display: none;
     position: relative;
     z-index: 10;
     margin-top: 20px;
@@ -255,47 +251,89 @@ body {
     color: #ffffff;
     box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
     width: 300px;
-} 
-/* Existing styles remain unchanged */
+}
 
-/* Letter Container */
-.letter-container {
-    display: none; /* Initially hidden */
+/* Envelope Styles */
+.envelope-wrapper {
+    background: #f5edd1;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 230px;
+}
+
+.envelope::before {
+    content: "";
     position: absolute;
-    width: 400px;
-    height: 500px;
-    background: #f9e5c2;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 20px;
+    top: 0;
+    z-index: 2;
+    border-top: 130px solid #ecdeb8;
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+}
+
+.envelope::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 0px;
+    height: 0px;
+    border-top: 130px solid transparent;
+    border-right: 150px solid #e6cfa7;
+    border-bottom: 100px solid #e6cfa7;
+    border-left: 150px solid #e6cfa7;
+}
+
+.letter {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    width: 54%;
+    height: 80%;
+    background: #fff;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px 10px;
+}
+
+.text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #444;
+    text-align: left;
     font-size: 18px;
-    color: #333;
-    z-index: 20;
-    transition: opacity 0.5s ease-in-out;
 }
 
-.letter-container p {
-    margin-top: 20px;
-    line-height: 1.5;
-}
-
-.letter-container .close-btn {
+.heart {
+    width: 80px;
+    height: 80px;
     position: absolute;
-    top: 10px;
-    right: 15px;
-    background: crimson;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+    bottom: -80px;
+    left: 50%;
+    margin-left: -40px;
+    background-color: #e30f5d;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: heart 2s infinite;
 }
 
+@keyframes heart {
+    0% {
+        transform: scale(1);
+    }
 
-.show-letter {
-    display: block;
-    opacity: 1;
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
