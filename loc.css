@@ -1,317 +1,179 @@
-* {
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background: lightblue;
-    transition: 3s;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
 }
 
 .container {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.final-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    margin-top: 20px;
+}
+
+.left-image, .right-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 20px;
+}
+
+.main-image {
+    width: 250px;
+    height: 250px;
+    background-image: url('beluga.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .gift-gif {
-    position: absolute;
-    top: -300px;
-    width: 400px;
-    height: auto;
-    z-index: 10;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
 }
 
 .open-box-message {
-    margin-top: -75px;
-    padding: 15px;
-    background-color: rgb(255, 85, 193);
-    border: 2px solid pink;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
-    width: 200px;
-    z-index: 20;
-    position: relative;
-    top: 45px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .gift {
-    position: absolute;
-    width: 150px;
-    height: 100px;
-    background: rgb(238, 188, 143);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    top: 100px;
-    transition: 0.5s;
-    z-index: 5;
-}
-
-.gift::before {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 100px;
-    background: crimson;
-    left: 62px;
-}
-
-.gift::after {
-    content: '';
-    position: absolute;
-    width: 150px;
-    height: 100px;
-    box-shadow: inset 0 8px rgba(0, 0, 0, 0.3);
-}
-
-#click {
-    display: none;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #f4d03f;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .click {
     position: absolute;
-    background: rgb(238, 188, 143);
-    width: 170px;
-    height: 40px;
-    top: -38px;
-    left: -10px;
-    transform-origin: bottom left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background-color: #fff;
     cursor: pointer;
-    transition: 0.5s;
-    border-radius: 10px;
 }
 
-.click::before {
+.tape, .shadow {
     position: absolute;
-    content: '';
-    width: 25px;
-    height: 40px;
-    background: crimson;
-    left: 75px;
+    background-color: #333;
+    border-radius: 5px;
 }
 
 .tape {
-    position: absolute;
-    background: crimson;
-    width: 2.5em;
-    height: 3em;
-    top: -65px;
-    left: 25px;
-    border-radius: 1.5em 0 3em 1em/ 1.5em 0 3em 3.5em;
-    transform: rotate(60deg);
-    z-index: -1;
-    transition: 0.5s;
-}
-
-.tape::before {
-    content: '';
-    position: absolute;
-    background: crimson;
-    width: 2.5em;
-    height: 3em;
-    left: 30px;
-    border-radius: 0 1.5em 1em 3em/0 1.5em 3.5em;
-    top: -51px;
-    transform: rotate(-120deg);
+    top: 10%;
+    left: 50%;
+    width: 50%;
+    height: 5px;
+    transform: translateX(-50%);
 }
 
 .shadow {
-    position: absolute;
-    background: rgb(169, 16, 47);
-    width: 30px;
-    height: 30px;
-    top: -55px;
-    left: 59px;
-    border-radius: 50%;
-    border: none;
-    transform-origin: 100% 15%;
-    transition: 0.5s;
-    z-index: -1;
-}
-
-.shadow::before {
-    position: absolute;
-    content: '';
-    width: 25px;
-    height: 8px;
-    background: rgba(0, 0, 0, 0.2);
-    left: -20px;
-    top: 0;
-    transform: rotate(30deg);
-    border-top-left-radius: 100%;
-    border-top-right-radius: 90%;
-}
-
-.shadow::after {
-    position: absolute;
-    content: '';
-    width: 25px;
-    height: 8px;
-    background: rgba(0, 0, 0, 0.2);
-    left: 25px;
-    top: 0;
-    transform: rotate(-20deg);
-    border-top-left-radius: 100%;
-    border-top-right-radius: 90%;
-}
-
-.final-container {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    animation: animate 3s linear forwards;
-}
-
-.final-container img {
-    width: 300px;
-    height: auto;
-}
-
-.left-image {
-    position: absolute;
-    left: -300px;
-    top: 0px;
-    width: 200px;
-}
-
-.right-image {
-    position: absolute;
-    top: 1px;
-    right: -300px;
-}
-
-.main-image {
-    background: url("beluga.jpg") no-repeat center center;
-    background-size: cover;
-    width: 500px;
-    height: 350px;
-    display: block;
+    bottom: 0;
+    left: 50%;
+    width: 90%;
+    height: 10px;
+    opacity: 0.2;
+    transform: translateX(-50%);
 }
 
 .message-box {
-    position: absolute;
-    bottom: -300px;
-    padding: 15px;
-    background-color: rgb(255, 217, 0);
-    border: 2px solid orange;
-    border-radius: 15px;
+    display: none;
+    background-color: #fcfcfc;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
     font-size: 18px;
     color: #333;
-    width: 220px;
     cursor: pointer;
 }
 
-#surpriseGif {
-    display: none;
+#surpriseGif, #newSurpriseGif {
     width: 300px;
-    height: auto;
-    margin-top: -50px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
-}
-
-#newSurpriseGif {
+    height: 300px;
+    margin-top: 20px;
     display: none;
-    width: 150px;
-    height: auto;
-    position: absolute;
-    left: 320px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 10px;
 }
 
 #borderBox {
     display: none;
-    position: relative;
-    z-index: 10;
-    margin-top: 20px;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    background-color: rgba(255, 20, 147, 0.8);
-    font-size: 35px;
+    font-size: 22px;
     font-weight: bold;
-    text-align: center;
-    color: #ffffff;
-    box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
-    width: 300px;
+    margin-top: 20px;
+    color: #e30f5d;
 }
 
-/* Envelope Styles */
+.click-letter {
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e30f5d;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.click-letter:hover {
+    background-color: #c6094f;
+}
+
+/* Envelope styles */
 .envelope-wrapper {
-    background: #f5edd1;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    width: 350px;
+    height: 300px;
 }
 
 .envelope {
     position: relative;
-    width: 300px;
-    height: 230px;
-}
-
-.envelope::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    z-index: 2;
-    border-top: 130px solid #ecdeb8;
-    border-right: 150px solid transparent;
-    border-left: 150px solid transparent;
-    transform-origin: top;
-    transition: all 0.5s ease-in-out 0.7s;
-}
-
-.envelope::after {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    width: 0px;
-    height: 0px;
-    border-top: 130px solid transparent;
-    border-right: 150px solid #e6cfa7;
-    border-bottom: 100px solid #e6cfa7;
-    border-left: 150px solid #e6cfa7;
+    width: 100%;
+    height: 100%;
+    background: #f5edd1;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .letter {
     position: absolute;
-    right: 20%;
-    bottom: 0;
-    width: 54%;
-    height: 80%;
-    background: #fff;
-    text-align: center;
-    transition: all 1s ease-in-out;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    padding: 20px 10px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    color: #333;
+    border-radius: 10px;
 }
 
-.text {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #444;
+.letter .text {
+    font-size: 16px;
     text-align: left;
-    font-size: 18px;
 }
 
+/* Heart animation */
 .heart {
     width: 80px;
     height: 80px;
@@ -336,4 +198,9 @@ body {
     100% {
         transform: scale(1);
     }
+}
+
+/* Additional Audio Settings */
+audio {
+    display: none;
 }
