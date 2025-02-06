@@ -1,181 +1,257 @@
-/* Styling the body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
-    color: #333;
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
+    box-sizing: border-box;
 }
 
-/* Styling the 'Click on Letter' button */
-.letter-button {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 12px;
-    margin: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.letter-button:hover {
-    background-color: #45a049; /* Darker Green */
-}
-
-/* Styling the letter box */
-.letter-wrapper {
-    display: none;
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.envelope {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.letter {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.text {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-}
-
-.text strong {
-    font-size: 20px;
-    color: #555;
-}
-
-/* Styling the final container and images */
-.final-container {
+body {
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: lightblue;
+    transition: 3s;
 }
 
-.left-image,
-.right-image {
-    width: 45%;
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.gift-gif {
+    position: absolute;
+    top: -300px;
+    width: 400px;
+    height: auto;
+    z-index: 10;
+}
+
+.open-box-message {
+    margin-top: -75px;
+    padding: 15px;
+    background-color: rgb(255, 85, 193);
+    border: 2px solid pink;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    width: 200px;
+    z-index: 20;
+    position: relative;
+    top: 45px;
+}
+
+.gift {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background: rgb(238, 188, 143);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    top: 100px;
+    transition: 0.5s;
+    z-index: 5;
+}
+
+.gift::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    background: crimson;
+    left: 62px;
+}
+
+.gift::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    box-shadow: inset 0 8px rgba(0, 0, 0, 0.3);
+}
+
+#click {
+    display: none;
+}
+
+.click {
+    position: absolute;
+    background: rgb(238, 188, 143);
+    width: 170px;
+    height: 40px;
+    top: -38px;
+    left: -10px;
+    transform-origin: bottom left;
+    cursor: pointer;
+    transition: 0.5s;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.click::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 40px;
+    background: crimson;
+    left: 75px;
+}
+
+.tape {
+    position: absolute;
+    background: crimson;
+    width: 2.5em;
+    height: 3em;
+    top: -65px;
+    left: 25px;
+    border-radius: 1.5em 0 3em 1em/ 1.5em 0 3em 3.5em;
+    transform: rotate(60deg);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.tape::before {
+    content: '';
+    position: absolute;
+    background: crimson;
+    width: 2.5em;
+    height: 3em;
+    left: 30px;
+    border-radius: 0 1.5em 1em 3em/0 1.5em 3.5em;
+    top: -51px;
+    transform: rotate(-120deg);
+}
+
+.shadow {
+    position: absolute;
+    background: rgb(169, 16, 47);
+    width: 30px;
+    height: 30px;
+    top: -55px;
+    left: 59px;
+    border-radius: 50%;
+    border: none;
+    transform-origin: 100% 15%;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.shadow::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    left: -20px;
+    top: 0;
+    transform: rotate(30deg);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 90%;
+}
+
+.shadow::after {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    left: 25px;
+    top: 0;
+    transform: rotate(-20deg);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 90%;
+}
+
+.final-container {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: animate 3s linear forwards;
+}
+
+.final-container img {
+    width: 300px;
+    height: auto;
+}
+
+.left-image {
+    position: absolute;
+    left: -300px;
+    top: 0px;
+    width: 200px;
+}
+
+.right-image {
+    position: absolute;
+    top: 1px;
+    right: -300px;
 }
 
 .main-image {
-    width: 45%;
-    height: 250px;
-    background-image: url('beluga.jpg');
+    background: url("beluga.jpg") no-repeat center center;
     background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 350px;
+    display: block;
 }
 
-/* Styling the gift box */
-.gift {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 20px auto;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    border: 2px solid #ddd;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.gift input[type="checkbox"] {
-    display: none;
-}
-
-.gift .click {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #4CAF50;
-    border-radius: 10px;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-}
-
-.gift .tape {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 2px;
-    background-color: #999;
-    transform: translate(-50%, -50%);
-}
-
-.gift .shadow {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 80%;
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    transform: translateX(-50%);
-}
-
-/* Styling the message box */
 .message-box {
-    display: none;
-    background-color: #fffae6;
+    position: absolute;
+    bottom: -300px;
     padding: 15px;
-    border-radius: 10px;
+    background-color: rgb(255, 217, 0);
+    border: 2px solid orange;
+    border-radius: 15px;
+    text-align: center;
     font-size: 18px;
-    color: #555;
-    margin-top: 20px;
-    font-weight: bold;
+    color: #333;
+    width: 220px;
     cursor: pointer;
 }
 
-/* Styling the surprise GIF */
-#surpriseGif,
+#surpriseGif {
+    display: none;
+    width: 300px;
+    height: auto;
+    margin-top: -50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+}
+
+
 #newSurpriseGif {
     display: none;
-    margin-top: 20px;
-    width: 300px;
+    width: 150px;
+    height: auto;
+    position: absolute;
+    left: 320px;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: 10px;
 }
 
-/* Styling the border box */
+
 #borderBox {
     display: none;
+    position: relative;
+    z-index: 10;
     margin-top: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    background-color: #e8e8e8;
     padding: 20px;
+    border: none;
     border-radius: 10px;
-    border: 2px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 20, 147, 0.8);
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
+    width: 300px;
 }
