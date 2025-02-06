@@ -31,16 +31,25 @@
             <div class="shadow"></div>
         </div>
 
-        <!-- Message Box (Initially Hidden) -->
         <div class="message-box" id="messageBox" style="display: none;" onclick="showGif()">
             Click for a Surprise!
         </div>
 
-        <!-- Surprise GIF (Initially Hidden) -->
         <img src="her.jpg" alt="Surprise GIF" id="surpriseGif" style="display: none;">
         <img src="thankyou.webp" alt="Thank You GIF" id="newSurpriseGif" style="display: none;">
         <div class="border-box" id="borderBox">
             For you , GORGEOUSSSS 🤍
+        </div>
+
+        <!-- Letter Section -->
+        <div class="letter-container" id="letterContainer" style="display: none;">
+            <div class="letter">
+                <p>My Dearest,</p>
+                <p>You are the most wonderful person in my life, and I can't express how much you mean to me.</p>
+                <p>Every moment with you is a treasure, and I am grateful for your love and kindness.</p>
+                <p>Forever Yours,</p>
+                <p><strong>Your Love</strong></p>
+            </div>
         </div>
     </div>
 
@@ -49,7 +58,6 @@
         Your browser does not support the audio element.
     </audio>
 
-    <!-- New background music for the "her image" page -->
     <audio id="herMusic" loop>
         <source src="i-wanna-be-yours-artic-monke-63563.mp3" type="audio/mp4">
         Your browser does not support the audio element.
@@ -58,24 +66,25 @@
     <script>
         function showBeluga() {
             document.body.style.background = "#000";
-            document.getElementById("finalContainer").style.display = "flex"; // Show final images
-            document.getElementById("giftGif").style.display = "none"; // Hide the gift animation
-            document.getElementById("openBoxText").style.display = "none"; // Hide the "Open the box" text
-            document.getElementById("messageBox").style.display = "block"; // Show message box
+            document.getElementById("finalContainer").style.display = "flex";
+            document.getElementById("giftGif").style.display = "none";
+            document.getElementById("openBoxText").style.display = "none";
+            document.getElementById("messageBox").style.display = "block";
             document.getElementById("bgMusic").play();
-            document.getElementById("giftBox").style.display = 'none'; // Completely remove the gift box after clicking
+            document.getElementById("giftBox").style.display = 'none';
             document.getElementById("borderBox").style.display = "none";
         }
 
         function showGif() {
-            document.getElementById("surpriseGif").style.display = "block"; // Show surprise gif
+            document.getElementById("surpriseGif").style.display = "block";
             document.getElementById("newSurpriseGif").style.display = "block";
-            document.getElementById("messageBox").style.display = "none"; // Hide message box
-            document.getElementById("finalContainer").style.display = "none"; // Hide the Beluga image and the left/right images
-            document.getElementById("openBoxText").style.display = "none"; // Hide "Open the box" text
-            document.getElementById("bgMusic").pause(); // Stop the previous music
-            document.getElementById("herMusic").play(); // Play new music for the her image page
+            document.getElementById("messageBox").style.display = "none";
+            document.getElementById("finalContainer").style.display = "none";
+            document.getElementById("openBoxText").style.display = "none";
+            document.getElementById("bgMusic").pause();
+            document.getElementById("herMusic").play();
             document.getElementById("borderBox").style.display = "block";
+            document.getElementById("letterContainer").style.display = "block";
         }
     </script>
 </body>
