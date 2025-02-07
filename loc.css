@@ -22,7 +22,6 @@ body {
     flex-direction: column;
 }
 
-
 .gift-gif {
     position: absolute;
     top: -300px;
@@ -92,80 +91,6 @@ body {
     border-radius: 10px;
 }
 
-.click::before {
-    position: absolute;
-    content: '';
-    width: 25px;
-    height: 40px;
-    background: crimson;
-    left: 75px;
-}
-
-.tape {
-    position: absolute;
-    background: crimson;
-    width: 2.5em;
-    height: 3em;
-    top: -65px;
-    left: 25px;
-    border-radius: 1.5em 0 3em 1em/ 1.5em 0 3em 3.5em;
-    transform: rotate(60deg);
-    z-index: -1;
-    transition: 0.5s;
-}
-
-.tape::before {
-    content: '';
-    position: absolute;
-    background: crimson;
-    width: 2.5em;
-    height: 3em;
-    left: 30px;
-    border-radius: 0 1.5em 1em 3em/0 1.5em 3.5em;
-    top: -51px;
-    transform: rotate(-120deg);
-}
-
-.shadow {
-    position: absolute;
-    background: rgb(169, 16, 47);
-    width: 30px;
-    height: 30px;
-    top: -55px;
-    left: 59px;
-    border-radius: 50%;
-    border: none;
-    transform-origin: 100% 15%;
-    transition: 0.5s;
-    z-index: -1;
-}
-
-.shadow::before {
-    position: absolute;
-    content: '';
-    width: 25px;
-    height: 8px;
-    background: rgba(0, 0, 0, 0.2);
-    left: -20px;
-    top: 0;
-    transform: rotate(30deg);
-    border-top-left-radius: 100%;
-    border-top-right-radius: 90%;
-}
-
-.shadow::after {
-    position: absolute;
-    content: '';
-    width: 25px;
-    height: 8px;
-    background: rgba(0, 0, 0, 0.2);
-    left: 25px;
-    top: 0;
-    transform: rotate(-20deg);
-    border-top-left-radius: 100%;
-    border-top-right-radius: 90%;
-}
-
 .final-container {
     position: absolute;
     width: 300px;
@@ -180,27 +105,6 @@ body {
 .final-container img {
     width: 300px;
     height: auto;
-}
-
-.left-image {
-    position: absolute;
-    left: -300px;
-    top: 0px;
-    width: 200px;
-}
-
-.right-image {
-    position: absolute;
-    top: 1px;
-    right: -300px;
-}
-
-.main-image {
-    background: url("beluga.jpg") no-repeat center center;
-    background-size: cover;
-    width: 500px;
-    height: 350px;
-    display: block;
 }
 
 .message-box {
@@ -226,7 +130,6 @@ body {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
 }
 
-
 #newSurpriseGif {
     display: none;
     width: 150px;
@@ -237,7 +140,6 @@ body {
     transform: translateY(-50%);
     border-radius: 10px;
 }
-
 
 #borderBox {
     display: none;
@@ -254,4 +156,20 @@ body {
     color: #ffffff;
     box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
     width: 300px;
+}
+
+#birthdayBox {
+    display: none;
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 105, 180, 0.9);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(255, 105, 180, 0.9);
+    width: 400px;
 }
