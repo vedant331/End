@@ -69,8 +69,16 @@ body {
 }
 
 .final-container img {
-    width: 150px;
+    width: 120px;
     height: auto;
+}
+
+.main-image {
+    background: url("beluga.jpg") no-repeat center center;
+    background-size: contain;
+    width: 300px;
+    height: 200px;
+    display: block;
 }
 
 .message-box {
@@ -112,16 +120,16 @@ body {
     position: relative;
     z-index: 10;
     margin-top: 20px;
-    padding: 10px;
+    padding: 8px;
     border: none;
     border-radius: 10px;
     background-color: rgba(255, 20, 147, 0.8);
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
     box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
-    width: 250px;
+    width: 200px;
 }
 
 #birthdayBox {
@@ -129,13 +137,13 @@ body {
     position: relative;
     z-index: 10;
     margin-top: 20px;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     background-color: rgba(255, 105, 180, 0.9);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
     box-shadow: 0px 0px 20px rgba(255, 105, 180, 0.9);
-    width: 300px;
+    width: 250px;
 }
