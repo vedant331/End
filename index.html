@@ -10,20 +10,15 @@
 
 <body>
     <div class="container">
-        <!-- Final Images (Initially Hidden) -->
         <div class="final-container" id="finalContainer" style="display: none;">
             <img src="simp.webp" alt="Left Image" class="left-image">
-            <div class="main-image"></div> <!-- Holds beluga.jpg -->
-            <img src="lomp.webp" alt="Right Image" class="right-image">
+            <div class="main-image"></div> <img src="lomp.webp" alt="Right Image" class="right-image">
         </div>
 
-        <!-- Gift Animation GIF -->
         <img src="finger-heart-bts.gif" alt="Gift Animation" class="gift-gif" id="giftGif">
 
-        <!-- "Open the box" Message -->
         <label for="click" class="open-box-message" id="openBoxText">CLICK ON THE LID</label>
 
-        <!-- Gift Box -->
         <div class="gift" id="giftBox">
             <input type="checkbox" id="click" onclick="showBeluga();">
             <label for="click" class="click"></label>
@@ -39,8 +34,20 @@
 
         <img src="her.jpg" alt="Surprise GIF" id="surpriseGif" style="display: none;">
         <img src="thankyou.webp" alt="Thank You GIF" id="newSurpriseGif" style="display: none;">
-        <div class="border-box" id="borderBox">
+
+        <div class="border-box" id="borderBox" style="background-color: lightblue; color: darkblue; margin-top: 20px;">
             For you , GORGEOUSSSS 🤍
+        </div>
+
+        <div class="letter-box" id="letterBox"
+            style="display: none; margin-top: 20px; padding: 20px; border: 2px solid lightblue; border-radius: 10px; background-color: white; width: 300px;">
+            <p>Dear [Name],</p>
+            <p>Happy birthday! I wanted to create something special for you, and I hope you enjoyed the little
+                surprise. Wishing you all the happiness and joy in the world. You're an amazing person, inside and
+                out.</p>
+            <p>[Continue your letter...]</p>
+            <p>Love,<br>
+                [Your Name]</p>
         </div>
     </div>
 
@@ -49,7 +56,6 @@
         Your browser does not support the audio element.
     </audio>
 
-    <!-- New background music for the "her image" page -->
     <audio id="herMusic" loop>
         <source src="i-wanna-be-yours-artic-monke-63563.mp3" type="audio/mp4">
         Your browser does not support the audio element.
@@ -76,6 +82,7 @@
             document.getElementById("bgMusic").pause(); // Stop the previous music
             document.getElementById("herMusic").play(); // Play new music for the her image page
             document.getElementById("borderBox").style.display = "block";
+            document.getElementById("letterBox").style.display = "block";
         }
     </script>
 </body>
