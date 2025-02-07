@@ -98,12 +98,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px; /* Reduced gap */
     animation: animate 3s linear forwards;
 }
 
 .final-container img {
-    width: 300px;
+    width: 200px; /* Reduced size */
     height: auto;
 }
 
@@ -132,7 +132,7 @@ body {
 
 #newSurpriseGif {
     display: none;
-    width: 150px;
+    width: 120px; /* Reduced size */
     height: auto;
     position: absolute;
     left: 320px;
