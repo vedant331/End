@@ -186,14 +186,14 @@ body {
     position: absolute;
     left: -300px;
     top: 0px;
-    width: 150px; /* Decreased from 200px */
+    width: 100px; /* Decreased from 200px */
 }
 
 .right-image {
     position: absolute;
     top: 1px;
     right: -300px;
-    width: 150px; /* Decreased from 200px */
+    width: 100px; /* Decreased from 200px */
 }
 .main-image {
     background: url("beluga.jpg") no-repeat center center;
