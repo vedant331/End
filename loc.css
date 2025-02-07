@@ -244,14 +244,14 @@ body {
     position: relative;
     z-index: 10;
     margin-top: 20px;
-    padding: 20px;
+    padding: 10px; /* Reduced padding for a smaller border box */
     border: none;
     border-radius: 10px;
     background-color: rgba(255, 20, 147, 0.8);
-    font-size: 35px;
+    font-size: 20px; /* Reduced font size from 35px */
     font-weight: bold;
     text-align: center;
     color: #ffffff;
     box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
-    width: 300px;
+    width: 250px; /* Optional: Reduced width if needed */
 }
