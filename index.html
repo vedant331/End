@@ -10,20 +10,16 @@
 
 <body>
     <div class="container">
-        <!-- Final Images (Initially Hidden) -->
         <div class="final-container" id="finalContainer" style="display: none;">
             <img src="simp.webp" alt="Left Image" class="left-image">
-            <div class="main-image"></div> <!-- Holds beluga.jpg -->
+            <div class="main-image"></div>
             <img src="lomp.webp" alt="Right Image" class="right-image">
         </div>
 
-        <!-- Gift Animation GIF -->
         <img src="finger-heart-bts.gif" alt="Gift Animation" class="gift-gif" id="giftGif">
 
-        <!-- "Open the box" Message -->
         <label for="click" class="open-box-message" id="openBoxText">CLICK ON THE LID</label>
 
-        <!-- Gift Box -->
         <div class="gift" id="giftBox">
             <input type="checkbox" id="click" onclick="showBeluga();">
             <label for="click" class="click"></label>
@@ -31,16 +27,19 @@
             <div class="shadow"></div>
         </div>
 
-
         <div class="message-box" id="messageBox" style="display: none;" onclick="showGif()">
             Click for a Surprise!
         </div>
 
-
         <img src="her.jpg" alt="Surprise GIF" id="surpriseGif" style="display: none;">
         <img src="thankyou.webp" alt="Thank You GIF" id="newSurpriseGif" style="display: none;">
-        <div class="border-box" id="borderBox">
+
+        <div class="border-box" id="borderBox" style="display: none;">
             For you , GORGEOUSSSS 🤍
+        </div>
+
+        <div class="border-box" id="birthdayMessage" style="display: none; margin-top: 20px;">
+            Happy birthday to the most imaginative person I know! I hope this year brings you one step closer to experiencing all the fantastical adventures you dream of. And hey, while you're busy being fabulous, remember to eat something other than cake! Celebrations are fun, but so is not fainting from hunger. 😉 Also, sending you a big dose of good vibes and positive energy for the year ahead.
         </div>
     </div>
 
@@ -49,7 +48,6 @@
         Your browser does not support the audio element.
     </audio>
 
-    <!-- New background music for the "her image" page -->
     <audio id="herMusic" loop>
         <source src="i-wanna-be-yours-artic-monke-63563.mp3" type="audio/mp4">
         Your browser does not support the audio element.
@@ -58,24 +56,24 @@
     <script>
         function showBeluga() {
             document.body.style.background = "#000";
-            document.getElementById("finalContainer").style.display = "flex"; // Show final images
-            document.getElementById("giftGif").style.display = "none"; // Hide the gift animation
-            document.getElementById("openBoxText").style.display = "none"; // Hide the "Open the box" text
-            document.getElementById("messageBox").style.display = "block"; // Show message box
+            document.getElementById("finalContainer").style.display = "flex";
+            document.getElementById("giftGif").style.display = "none";
+            document.getElementById("openBoxText").style.display = "none";
+            document.getElementById("messageBox").style.display = "block";
             document.getElementById("bgMusic").play();
-            document.getElementById("giftBox").style.display = 'none'; // Completely remove the gift box after clicking
-            document.getElementById("borderBox").style.display = "none";
+            document.getElementById("giftBox").style.display = 'none';
         }
 
         function showGif() {
-            document.getElementById("surpriseGif").style.display = "block"; // Show surprise gif
+            document.getElementById("surpriseGif").style.display = "block";
             document.getElementById("newSurpriseGif").style.display = "block";
-            document.getElementById("messageBox").style.display = "none"; // Hide message box
-            document.getElementById("finalContainer").style.display = "none"; // Hide the Beluga image and the left/right images
-            document.getElementById("openBoxText").style.display = "none"; // Hide "Open the box" text
-            document.getElementById("bgMusic").pause(); // Stop the previous music
-            document.getElementById("herMusic").play(); // Play new music for the her image page
+            document.getElementById("messageBox").style.display = "none";
+            document.getElementById("finalContainer").style.display = "none";
+            document.getElementById("openBoxText").style.display = "none";
+            document.getElementById("bgMusic").pause();
+            document.getElementById("herMusic").play();
             document.getElementById("borderBox").style.display = "block";
+            document.getElementById("birthdayMessage").style.display = "block";
         }
     </script>
 </body>
