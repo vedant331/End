@@ -218,7 +218,7 @@ body {
 
 #surpriseGif {
     display: none;
-    width: 300px;
+    width: 200px;
     height: auto;
     margin-top: -50px;
     border-radius: 10px;
@@ -230,8 +230,8 @@ body {
     width: 150px;
     height: auto;
     position: absolute;
-    left: 320px;
-    top: 50%;
+    left: 300px;
+    top: 10%;
     transform: translateY(-50%);
     border-radius: 10px;
 }
@@ -241,11 +241,11 @@ body {
     position: relative;
     z-index: 10;
     margin-top: 20px;
-    padding: 20px;
+    padding: 12px;
     border: none;
     border-radius: 10px;
     background-color: rgba(255, 192, 203, 0.8); /* Light pink */
-    font-size: 35px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
